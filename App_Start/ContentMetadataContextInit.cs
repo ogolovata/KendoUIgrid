@@ -20,11 +20,11 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "Product", new List<string>(){ "VS", "SQL", "Azure" } },
-                { "Type", new List<string>() { "Conceptual", "Reference", "Hero Content" } },
-                { "Author", new List<string>() { "Olena", "Tom", "Olga" } },
-                { "Translation", new List<string>() { "Human", "Machine" } },
-                { "Site", new List<string> { "MSDN", "ACOM", "TN" }}
+                { "Product_FamilyName", new List<string>(){ "AZURE" } },
+                { "Site", new List<string>() { "msdn.microsoft.com" } },
+                { "Title", new List<string>() { "Azure Active Directory Connect" } },
+                { "Product_Version", new List<string>() { "100" } },
+                { "URL", new List<string> { "https://msdn.microsoft.com/library/azure/dn832695.aspx" }}
             }; 
             
             for (var i = 1; i <= _entities; ++i)
