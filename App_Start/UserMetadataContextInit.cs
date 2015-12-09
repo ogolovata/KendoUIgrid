@@ -19,10 +19,15 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "SiteLocale", new List<string>(){ "JP", "UK", "US" } },
-                { "OS", new List<string>() { "Microsoft Windows", "Linux2", "OS X", "iOS" } },
-                { "Browser", new List<string>() { "IE/Microsoft Edge", "Google Chrome", "Firefoxt", "Opera", "Safari" } },
-                { "BrowserLanguage", new List<string>() { "JP", "EN"} },
+                { "User_Browser", new List<string>(){ "IE" } },
+                { "User_Country", new List<string>() { "united states" } },
+                { "MaxScroll", new List<string>() { "0" } },
+                { "PageLocale", new List<string>() { "en-us" }},
+                { "MatchLanguage", new List<string>() { "True", "False" }},
+                { "BrowserLanguage", new List<string>() { "en-us" }},
+                { "User_Device", new List<string>() { "PC" }},
+                { "FeedbackResponse", new List<string>() { "" }},
+                { "User_OS", new List<string>() { "Windows 10" }},
             };
             for (var i = 1; i <= _entities; ++i)
             {
