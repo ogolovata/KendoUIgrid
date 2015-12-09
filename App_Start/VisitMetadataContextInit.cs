@@ -19,17 +19,13 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "latitude", new List<string>(){ "41.2389135330717" } },
-                { "longitude", new List<string>() { "-95.9309396268035" } },
-                { "continent", new List<string>() { "north america" } },
-                { "country", new List<string>() { "united states" } },
-                { "region", new List<string>() { "NE" } },
-                { "state", new List<string>() { "nebraska" } },
-                { "city", new List<string>() { "omaha" } },
-                { "zip", new List<string>() { "68108" } },
-                { "timezone", new List<string>() { "-6" } },
-
-
+                { "cookies_enabled", new List<string>(){ "1", "0" } },
+                { "javascript_enabled", new List<string>() { "1", "0" } },
+                { "silverlight_installed", new List<string>() { "1", "0" } },
+                { "silverlight_on", new List<string>() { "" } },
+                { "silverlight_ver", new List<string>() { "5.10" } },
+                { "flash_installed", new List<string>() { "1", "0" } },
+                { "flash_ver", new List<string>() { "19.0" } },
             };
             for (var i = 1; i <= _entities; ++i)
             {

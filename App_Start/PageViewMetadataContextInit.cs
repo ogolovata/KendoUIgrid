@@ -19,6 +19,9 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
+                { "MaxScroll", new List<string>(){ "0", "2", "5", "10" } },
+                { "PageViewLength", new List<string>(){ "0", "2", "5", "10" } },
+                { "FeedbackRespondse", new List<string>(){ "" } },                
                 { "Page Authoring", new List<string>(){ "0", "1" } },
                 { "Survey", new List<string>() { "0", "1" } },
                 { "Disqus", new List<string>() { "0", "2", "5", "10" } },

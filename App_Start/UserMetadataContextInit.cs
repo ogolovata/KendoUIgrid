@@ -20,12 +20,15 @@ namespace KendoUIgrid.App_Start
             var properties = new Dictionary<string, List<string>>()
             { 
                 { "User_Browser", new List<string>(){ "IE" } },
+                { "User_Browser_ver", new List<string>(){ "11" } },
+                { "User_agent", new List<string>(){ "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko" } },
                 { "User_Country", new List<string>() { "united states" } },
                 { "MaxScroll", new List<string>() { "0" } },
                 { "PageLocale", new List<string>() { "en-us" }},
                 { "MatchLanguage", new List<string>() { "True", "False" }},
                 { "BrowserLanguage", new List<string>() { "en-us" }},
                 { "User_Device", new List<string>() { "PC" }},
+                { "User_Manufacturer", new List<string>() { "PC" } },
                 { "FeedbackResponse", new List<string>() { "" }},
                 { "User_OS", new List<string>() { "Windows 10" }},
             };
