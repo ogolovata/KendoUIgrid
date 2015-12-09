@@ -19,12 +19,20 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "Scroll -1", new List<string>(){ "0", "2", "5", "10" } },
-                { "Scroll 25%", new List<string>() { "0", "2", "5", "10" } },
-                { "Scroll 50%", new List<string>() { "0", "2", "5", "10" } },
-                { "Link click", new List<string>() { "0", "2", "5", "10"} },
-                { "Load video", new List<string>() { "0", "2", "5", "10"} },
-                { "Rating", new List<string>() { "0", "2", "5", "10"} },
+                { "MaxScroll", new List<string>(){ "0", "2", "5", "10" } },
+                { "PageViewLength", new List<string>(){ "0", "2", "5", "10" } },
+                { "FeedbackRespondse", new List<string>(){ "" } },                
+                { "Page Authoring", new List<string>(){ "0", "1" } },
+                { "Survey", new List<string>() { "0", "1" } },
+                { "Disqus", new List<string>() { "0", "2", "5", "10" } },
+                { "Contribution", new List<string>() { "0", "1"} },
+                { "Rating Verbatim", new List<string>() { "0", "1"} },
+                { "Revision", new List<string>() { "0", "1"} },
+                { "AnchorTagClick", new List<string>() { "0", "1"} },
+                { "ImgTagClick", new List<string>() { "0", "2", "5", "10"} },
+                { "AreaTagClick", new List<string>() { "0", "2", "5", "10"} },
+                { "InputTagClick", new List<string>() { "0", "2", "5", "10"} },
+                { "MsomCustomEvent", new List<string>() { "0", "2", "5", "10"} },
             };
             for (var i = 1; i <= _entities; ++i)
             {

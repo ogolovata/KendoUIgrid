@@ -19,9 +19,13 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "V-property1", new List<string>(){ "A", "B", "C" } },
-                { "V-property2", new List<string>() { "AA", "BB", "CC" } },
-                { "V-property3", new List<string>() { "AAA", "BBB", "CCC" } },
+                { "cookies_enabled", new List<string>(){ "1", "0" } },
+                { "javascript_enabled", new List<string>() { "1", "0" } },
+                { "silverlight_installed", new List<string>() { "1", "0" } },
+                { "silverlight_on", new List<string>() { "" } },
+                { "silverlight_ver", new List<string>() { "5.10" } },
+                { "flash_installed", new List<string>() { "1", "0" } },
+                { "flash_ver", new List<string>() { "19.0" } },
             };
             for (var i = 1; i <= _entities; ++i)
             {

@@ -18,14 +18,18 @@ namespace KendoUIgrid.App_Start
         protected override void Seed(EventMetadataContext context)
         {
             var activityTypes = new List<string>() {
-                "Page View",
                 "Page Authoring",
                 "Survey",
                 "Disqus",
                 "Contribution",
                 "Rating Verbatim",
-                "Revision"
-            };
+                "Revision",
+                "AnchorTagClick",
+                "ImgTagClick",
+                "AreaTagClick",
+                "InputTagClick",
+                "MsomCustomEvent",
+                    };
             for (var i = 1; i <= _entities; ++i)
             {
                 var events = _rnd.Next(10) + 1;

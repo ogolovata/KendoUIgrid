@@ -19,8 +19,15 @@ namespace KendoUIgrid.App_Start
         {
             var properties = new Dictionary<string, List<string>>()
             { 
-                { "M-property1", new List<string>(){ "X", "Y", "Z" } },
-                { "M-property2", new List<string>() { "XX", "YY", "ZZ" } },
+                { "latitude", new List<string>(){ "41.2389135330717" } },
+                { "longitude", new List<string>() { "-95.9309396268035" } },
+                { "continent", new List<string>() { "north america" } },
+                { "country", new List<string>() { "united states" } },
+                { "region", new List<string>() { "NE" } },
+                { "state", new List<string>() { "nebraska" } },
+                { "city", new List<string>() { "omaha" } },
+                { "zip", new List<string>() { "68108" } },
+                { "timezone", new List<string>() { "-6" } },
             };
             for (var i = 1; i <= _entities; ++i)
             {
