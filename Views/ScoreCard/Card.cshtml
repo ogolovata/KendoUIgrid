@@ -1,0 +1,234 @@
+﻿
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Event Metadata</th>
+            <th>Content Metadata</th>
+            <th>User Metadata</th>
+            <th>Pageview Metadata</th>
+        </tr>
+    </thead>
+    <tr>
+        <td width="25%"><div id="eventMetadata"></div></td>
+        <td width="25%"><div id="contentmeta"></div></td>
+        <td width="25%"><div id="usermeta"></div></td>
+        <td width="25%"><div id="pageviewmeta"></div></td>
+    </tr>
+</table>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>Visit</th>
+            <th>Map</th>
+            <th>Issue</th>
+        </tr>
+    </thead>
+    <tr>
+        <td width="33%"><div id="visitmeta"></div></td>
+        <td width="33%"><div id="mapmeta"></div></td>
+        <td width="33%"><div id="issuemeta"></div></td>
+    </tr>
+</table>
+
+<script>
+   
+    var eventMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/eventmetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    EventDateTime: {  validation: { required: true } },
+                    ActivityType: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#eventMetadata").kendoGrid({
+        dataSource: eventMetadataSource,
+        height: 250,
+        columns: [
+          { field: "EventDateTime", title: "DateTime" },
+          { field: "ActivityType", title: "Event" }
+        ],
+    });
+
+    var contentMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/contentmetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#contentmeta").kendoGrid({
+        dataSource: contentMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+    var userMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/usermetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#usermeta").kendoGrid({
+        dataSource: userMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+
+
+    var pageViewMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/pageviewmetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#pageviewmeta").kendoGrid({
+        dataSource: pageViewMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+
+    var visitMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/visitmetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#visitmeta").kendoGrid({
+        dataSource: visitMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+
+    var mapMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/mapmetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#mapmeta").kendoGrid({
+        dataSource: mapMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+
+    var issueMetadataSource = new kendo.data.DataSource({
+        transport: {
+            read: {
+                // the remote service url
+                url: "http://localhost:8742/api/issuemetadata/" + @ViewData["id"],
+                dataType: "json"  // the data type of the returned result
+            },
+        },
+        schema: {
+            model: {         // the data, which the datasource will be bound to is in the "list" field of the response
+                id: "Id",
+                fields: {
+                    Id: { editable: false, type: "number" },
+                    PageViewId: { editable: false, type: "number" },
+                    Name: {  validation: { required: true } },
+                    Value: { validation: {required: true} },
+                }
+            }
+        }
+    });
+    $("#issuemeta").kendoGrid({
+        dataSource: issueMetadataSource,
+        height: 250,
+        columns: [
+          { field: "Name", title: "Property" },
+          { field: "Value", title: "Value" }],
+    });
+
+</script>
